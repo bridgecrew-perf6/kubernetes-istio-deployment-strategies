@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-exchange-fe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crypto-exchange-fe
+  template:
+    metadata:
+        labels:
+          app: crypto-exchange-fe
+    spec:
+      containers:
+        - image: bitvavo/k8s-istio-demo-app:latest
+          imagePullPolicy: IfNotPresent
+          name: crypto-exchange-fe
+          ports:
+            - name: fe-port
+              containerPort: 80
+          resources: {}
+
