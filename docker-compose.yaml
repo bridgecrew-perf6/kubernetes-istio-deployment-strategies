@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  vavo-demo:
+    image: bitvavo/k8s-istio-demo-app:latest
+    container_name: vavo-k8s-demo
+    ports:
+      - "7777:80"

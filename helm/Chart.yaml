@@ -1,0 +1,7 @@
+apiVersion: v2
+icon: bitvavo-mark-black.png
+name: k8s-istio-deployment-strategies
+appVersion: "0.1"
+description: A Helm chart to demonstrate deployment strategies with K8s and Istio
+version: 0.0.1
+type: application
