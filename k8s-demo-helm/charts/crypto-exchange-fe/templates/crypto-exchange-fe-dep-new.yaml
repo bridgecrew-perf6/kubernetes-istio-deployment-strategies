@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: crypto-exchange-fe
+  name: crypto-exchange-fe-new
 spec:
   replicas: 1
   selector:
@@ -11,12 +11,12 @@ spec:
     metadata:
         labels:
           app: crypto-exchange-fe
-          version: "0.1"
+          version: "0.2"
     spec:
       containers:
-        - image: bitvavo/k8s-canary-app:v0.1
+        - image: bitvavo/k8s-canary-app:v0.2
           imagePullPolicy: IfNotPresent
-          name: crypto-exchange-fe
+          name: crypto-exchange-fe-new
           ports:
             - name: fe-port
               containerPort: 80
