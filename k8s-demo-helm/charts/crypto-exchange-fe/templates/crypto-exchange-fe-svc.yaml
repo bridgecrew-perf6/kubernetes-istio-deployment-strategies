@@ -5,11 +5,10 @@ metadata:
     name: crypto-exchange-fe
   name: crypto-exchange-fe
 spec:
-  ports:
-    - name: crypto-exchange-fe
-      port: 31080
-      targetPort: 80
-      nodePort: 31080
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: crypto-exchange-fe
+    version: "0.1"
+  ports:
+    - port: 7777
+
